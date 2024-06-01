@@ -335,6 +335,8 @@ main {
 .car-card p {
     font-size: 0.75rem;
     margin: 5px 0;
+    text-align: center;
+    min-width: 300px;
 }
 .car-card-text {
     display: flex;
