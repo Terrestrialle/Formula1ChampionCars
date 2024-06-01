@@ -1,0 +1,446 @@
+body {
+    color: var(--col-darkness);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 80px; /* Adjust to match header height */
+    text-align: center;
+}
+main h2 {
+    font-size: 2rem;
+    color: var(--col-primary);
+    margin: 10px 0 20px 0;
+}
+main p {
+    color: var(--col-darkness);
+}
+
+.title-desc {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title-desc p {
+    max-width: 800px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--col-primary);
+    color: var(--col-light);
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    min-width: 400px;
+    background-color: var(--col-darkness);
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px var(--col-shadow-dim);
+}
+#search-input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 80%;
+    outline: none;
+    background-color: var(--col-background);
+    border: 1px solid transparent;
+    color: var(--col-light);
+    text-align: center;
+    border-radius: 50px;
+}
+#search-input::placeholder {
+    text-align: center;
+}
+#search-input:focus{
+    border: 1px solid var(--col-primary);
+}
+
+#more-setting {
+    margin: 5px 0;
+    padding: 10px;
+    width: 150px;
+    font-size: 0.8rem;
+    border-radius: 50px;
+    background-color: var(--col-background);
+    color: var(--col-light);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+#more-setting:hover {
+    background-color: var(--col-primary);
+}
+#filter-place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: var(--col-background);
+    border-radius: 50px;
+    width: 90%;
+}
+.sort-contain {
+    display: flex;
+    margin: 5px 0;
+    padding: 10px;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--col-primary);
+    border-radius: 50px;
+}
+.sort-label {
+    padding: 10px;
+    font-size: 1rem;
+}
+#sort-select {
+    background-color: var(--col-background);
+    border: none;
+    padding: 10px;
+    outline: none;
+    width: 50%;
+    color: var(--col-light);
+    border-radius: 15px;
+}
+#sort-select option {
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+#sort-select option:focus {
+    background-color: var(--col-darkness2);
+}
+#sort-select option:checked {
+    background-color: var(--col-primary);
+}
+.filter label {
+    color: var(--col-light);
+    margin-right: 10px;
+}
+
+.era-container {
+    background-color: var(--col-light2);
+    padding: 10px;
+    width: 80%;
+    border-radius: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.era-container label {
+    color: var(--col-darkness);
+}
+#era-select {
+    position: relative;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--col-darkness);
+    color: var(--col-light);
+    border-radius: 15px;
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none; /* Remove default styling for WebKit browsers */
+    -moz-appearance: none; /* Remove default styling for Firefox */
+    cursor: pointer;
+}
+
+#era-select option {
+    background-color: var(--col-background);
+    color: var(--col-light);
+    transition: 0.2s ease-in-out;
+    padding: 5px 0;
+    text-align: center;
+}
+#era-select option:focus {
+    background-color: var(--col-primary) !important;
+}
+#era-select option:checked {
+    background-color: var(--col-secondary);
+    color: var(--col-text-dark);
+}
+#era-select::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: var(--col-light2);
+    pointer-events: none;
+}
+
+.checkbox-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--col-light);
+    padding: 10px;
+    border-radius: 50px;
+    margin: 5px;
+    font-size: 0.75rem;
+}
+.checkbox-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox-container label {
+    margin: 0 5px 0 15px;
+    color: var(--col-darkness);
+}
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px; /* Set the width of the custom checkbox */
+    height: 20px; /* Set the height of the custom checkbox */
+    border: 1px solid var(--col-primary); /* Add border */
+    border-radius: 15px; /* Round the corners */
+    background-color: transparent; /* Make background transparent */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Add transition */
+}
+/* Style the checkbox when checked */
+input[type="checkbox"]:checked {
+    background-color: var(--col-primary); /* Change background color when checked */
+    border-color: var(--col-primary); /* Change border color when checked */
+}
+
+#car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.car-card {
+    border-radius: 50px;
+    background-color: var(--col-light2);
+    box-shadow: 0 4px 8px var(--col-shadow);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, filter 0.75s ease-in-out;
+    box-shadow: 10px 10px 10px var(--col-shadow-dim);
+}
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50px 50px 50px 0;
+}
+.car-card-text {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    background-color: var(--col-darkness);
+    border-radius: 50px;
+    margin-top: 20px;
+}
+.car-card h2, .car-card h3 {
+    margin: 5px 0;
+    color: var(--col-primary);
+}
+.car-card h4 {
+    color: var(--col-background);
+    font-weight: 800;
+}
+.car-card-text h2 {
+    position: absolute;
+    top: -45px;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    position: relative;
+    background-color: var(--col-primary);
+    color: var(--col-darkness);
+    border-radius: 50px;
+    width: 350px;
+    transition: color 0.3s ease-in-out;
+    box-shadow: 10px 10px 10px var(--col-shadow-dim);
+}
+.team-wrapper {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin: -45px 5px 5px 5px;
+    z-index: 2;
+}
+.team-wrapper h3{
+    padding: 5px;   
+}
+.team-wrapper div {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    padding: 5px;
+}
+.car-card-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    width: 100%;
+    text-align: center;
+    height: 150px;
+    background-color: var(--col-light2);
+    border-radius: 50px;
+    padding: 10px;
+}
+.car-card-p p{
+    color: var(--col-darkness);
+    width: 200px;
+}
+.car-card button {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: var(--col-primary);
+    color: var(--col-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.car-card button:hover {
+    background-color: var(--col-secondary);
+}
+#car-list:hover > .car-card:not(:hover){
+    filter:grayscale(0.75);
+}
+.car-card:hover{
+    transform: scale(1.05);
+}
+
+body.no-scroll {
+    overflow: hidden; /* Disable scrolling when the description box is open */
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Adjust opacity as needed */
+    z-index: 998;
+    display: none; /* Hidden by default */
+}
+
+#description-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    max-height: 500px;
+    border-radius: 50px;
+    background-color: var(--col-light2);
+    z-index: 1000;
+    text-align: left;
+    overflow-y: auto;
+}
+
+#description-box .close-btn {
+    float: right;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    color: var(--col-light);
+    border-radius: 50px;
+    margin: 0 5px;
+}
+
+.close-btn:hover {
+    background-color: var(--col-primary);
+}
+
+#description-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#desc-upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--col-darkness);
+    padding: 5px 0;
+    z-index: 2;
+}
+
+#desc-title {
+    font-size: 1.5rem;
+    margin: 0 5px 0 0;
+    width: 650px;
+    text-align: center;
+    background-color: var(--col-dark1);
+    color: var(--col-primary);
+    border: 1px solid var(--col-primary);
+    border-left: none;
+    border-radius: 0 50px 50px 0;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+#desc-title:hover {
+    background-color: var(--col-primary);
+    color: var(--col-dark1);
+}
+
+.desc-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom-right-radius: 50px;
+    z-index: 1;
+}
+
+.desc-text {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.desc-text p {
+    display: flex;
+}
+
+.label {
+    flex: 0 0 150px; /* Adjust width as needed */
+    font-weight: bold;
+}
+
+.value {
+    flex: 1;
+}
+
+.wdc-true {
+    color: var(--col-accent) !important; 
+}
+
+.wcc-true {
+    color: var(--col-light) !important;
+}
