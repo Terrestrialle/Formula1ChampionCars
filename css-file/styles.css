@@ -3,7 +3,7 @@
     --col-dark1: #080705;
     --col-darkness: #060609;
     --col-primary: #c00000;
-    --col-secondary: #a20021;
+    --col-secondary: #a22c29;
     --col-accent: #ffd400;
     --col-light: #e8e9f3;
     --col-light2:#e6e4ec;
@@ -372,17 +372,22 @@ main {
     border-radius:50px 50px 0 0;
 }
 .call-to-action p{
-    width: 250px;
+    width: 400px;
     margin: 10px auto;
 }
 .btn {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     background-color: var(--col-primary);
     color: var(--col-darkness);
-    width:250px;
+    width:400px;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     transition: background-color 0.2s ease-in-out;
+}
+.btn:hover {
+    background-color: var(--col-secondary);
 }
 .btn:hover {
     background-color: var(--col-secondary);
