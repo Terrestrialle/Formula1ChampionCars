@@ -169,7 +169,7 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
     const wccClass = isWCC ? 'wcc-true' : '';
 
     carCard.innerHTML = `
-      <img src="${image}" alt="${name}">
+     <img src="${image}" alt="${name}">
       <div class="car-card-text">
         <h2>${name}</h2>
         <div class="team-wrapper">
