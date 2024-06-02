@@ -261,12 +261,15 @@ input[type="checkbox"]:checked {
     font-weight: 800;
 }
 .car-card-text h2 {
-    position: absolute;
     top: -45px;
     text-decoration: none;
-    padding: 5px 15px;
+    padding: 5px 10px;
     font-size: 1.5rem;
+    min-height: 80px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--col-primary);
     color: var(--col-darkness);
     border-radius: 50px;
@@ -286,7 +289,7 @@ input[type="checkbox"]:checked {
 }
 .team-wrapper h3{
     padding: 5px;   
-    width: 150px;
+    width: 250px;
 }
 .team-wrapper div {
     display: flex;
