@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            // Add animation class
             entry.target.classList.add('show');
             entry.target.classList.add('animate__fadeInDown');
         } else{
@@ -23,8 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   const hiddenElements = document.querySelectorAll(".hidden");
   hiddenElements.forEach((el) => observer.observe(el));
-
-
+  
   class Car {
     static showDescription() {
       const descriptionBox = document.getElementById("description-box");
@@ -42,8 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove('no-scroll');
     }
   }
-
-  window.Car = Car; // Ensure Car class is globally accessible
+  window.Car = Car;
 
   class MoreSetting {
     static toggleSetting() {
@@ -53,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const checkboxContainers = document.getElementsByClassName("checkbox-container");
 
         if (moreSett.textContent.includes("More Setting")) {
-            // Hide elements
             for (let container of sortContainers) {
                 container.style.display = "none";
             }
@@ -63,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             moreSett.textContent = "Less Setting ▲";
         } else {
-            // Show elements
             for (let container of sortContainers) {
                 container.style.display = "flex";
             }
@@ -75,11 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 }
-
-// Attach the event listener to the paragraph element
 document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
   
-
   function filterCars() {
     const searchTerm = searchInput.value.toLowerCase();
     const selectedEra = eraSelect.value;
@@ -94,9 +86,8 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
         const carWDC = carCard.getAttribute('data-wdc') === 'true';
         const carWCC = carCard.getAttribute('data-wcc') === 'true';
         const carName = carCard.getAttribute('data-name').toLowerCase();
-
+        const driverName = carCard.getAttribute('driver-name').toLowerCase();
         let isVisible = true;
-
         // Era filter
         if (selectedEra !== 'all') {
             const [startYear, endYear] = selectedEra.split('-').map(Number);
@@ -104,7 +95,6 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
                 isVisible = false;
             }
         }
-
         // Show All filter
         if (!showAllChecked) {
             // WDC filter
@@ -116,9 +106,8 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
                 isVisible = false;
             }
         }
-
         // Search term filter
-        if (searchTerm && !carName.includes(searchTerm)) {
+        if (searchTerm && !carName.includes(searchTerm) && !driverName.includes(searchTerm)) {
             isVisible = false;
         }
 
@@ -172,6 +161,7 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
     carCard.className = 'car-card';
     carCard.setAttribute('data-name', name.toLowerCase());
     carCard.setAttribute('data-year', year);
+    carCard.setAttribute('driver-name', drivers.toLowerCase());
     carCard.setAttribute('data-constructorPoints', constructorPoints);
     carCard.setAttribute('data-wdc', isWDC);
     carCard.setAttribute('data-wcc', isWCC);
