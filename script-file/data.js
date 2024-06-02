@@ -14,7 +14,7 @@ const championshipCars = [
         weight:"700kg",
         drivers: ["Giuseppe Farina", "Juan Manuel Fangio", "Luigi Fagiolli"],
         constructorPoints: 81,
-        image: "../assets/1950-1959/1950AlfaRomeo158.jpg",
+        image: "/Formula1ChampionCars/assets/1950-1959/1950AlfaRomeo158.jpg",
         isWDC: true,
         isWCC: true,
     },
