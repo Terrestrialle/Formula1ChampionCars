@@ -277,7 +277,7 @@ input[type="checkbox"]:checked {
 .team-wrapper {
     display: flex;
     align-items: center;
-    width: 300px;
+    width: 350px;
     justify-content: space-between;
     padding: 5px 10px;
     border-radius: 50px;
@@ -286,6 +286,7 @@ input[type="checkbox"]:checked {
 }
 .team-wrapper h3{
     padding: 5px;   
+    width: 150px;
 }
 .team-wrapper div {
     display: flex;
