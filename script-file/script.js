@@ -116,7 +116,6 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
     }
 }
 
-
   function sortBy(attribute, isNumeric = false) {
     const carCards = Array.from(carList.getElementsByClassName('car-card'));
     carCards.sort((a, b) => {
@@ -161,7 +160,7 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
     carCard.className = 'car-card';
     carCard.setAttribute('data-name', name.toLowerCase());
     carCard.setAttribute('data-year', year);
-    carCard.setAttribute('driver-name', drivers.map(driver => driver.toLowerCase()).join(','));
+    carCard.setAttribute('driver-name', drivers.map(driver => driver.toLowerCase()).join(', '));
     carCard.setAttribute('data-constructorPoints', constructorPoints);
     carCard.setAttribute('data-wdc', isWDC);
     carCard.setAttribute('data-wcc', isWCC);
