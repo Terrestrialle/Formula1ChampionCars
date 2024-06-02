@@ -86,7 +86,7 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
         const carWDC = carCard.getAttribute('data-wdc') === 'true';
         const carWCC = carCard.getAttribute('data-wcc') === 'true';
         const carName = carCard.getAttribute('data-name').toLowerCase();
-        const driverName = carCard.getAttribute('driver-name').toLowerCase();
+        const driverNames = carCard.getAttribute('driver-name').toLowerCase();
         let isVisible = true;
         // Era filter
         if (selectedEra !== 'all') {
@@ -107,7 +107,7 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
             }
         }
         // Search term filter
-        if (searchTerm && !carName.includes(searchTerm) && !driverName.includes(searchTerm)) {
+        if (searchTerm && !carName.includes(searchTerm) && !driverNames.includes(searchTerm)) {
             isVisible = false;
         }
 
@@ -161,7 +161,7 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
     carCard.className = 'car-card';
     carCard.setAttribute('data-name', name.toLowerCase());
     carCard.setAttribute('data-year', year);
-    carCard.setAttribute('driver-name', drivers.toLowerCase());
+    carCard.setAttribute('driver-name', drivers.map(driver => driver.toLowerCase()).join(','));
     carCard.setAttribute('data-constructorPoints', constructorPoints);
     carCard.setAttribute('data-wdc', isWDC);
     carCard.setAttribute('data-wcc', isWCC);
@@ -220,5 +220,5 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
   // Initial filter and sort
   filterCars();
   sortBy('year', true);
-  document.getElementById('overlay').addEventListener('click', closeDescriptionBox);
+  document.getElementById('overlay').addEventListener('click', Car.closeDescription);
 });
