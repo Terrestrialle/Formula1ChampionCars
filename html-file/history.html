@@ -4,467 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css-file/styles.css">
-  <link rel="stylesheet" href="../css-file/styles-history.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="../css-file/styles-cars.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />  <script src="../script-file/data.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script src="../script-file/script.js" defer></script>
-  <title>Formula1 Car Champ</title>
+  <title>Formula1 Car Champ Cars</title>
 </head>
 <body>
 <header>
   <div id="title"><span class="invert-text">F1</span> Car</div>
   <nav id="navbar-menu">
     <ul>
-        <li><a href="main.html" class="nav-link">Home</a></li>
-        <li><a href="cars.html" class="nav-link">Cars</a></li>
-        <li><a href="history.html" class="nav-link nav-active">History</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="main.html" class="nav-link">Home</a></li>
+      <li><a href="cars.html" class="nav-link nav-active">Cars</a></li>
+      <li><a href="history.html" class="nav-link">History</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-<section id="section-container">
-    <section id="introductory" class="section-display">
-        <div class="number-container">
-            <h1>01</h1>
+  <h2 class="hidden animate__animated animate__fadeInDown"><span class="invert-text">F1</span> Cars</h2>
+  <div class="title-desc">
+    <p>All cars from 1950 - 2023 (recent) that won World Driver Championship, World Constructor Championship or both</p>
+  </div>
+  <div class="filter">
+    <input type="text" id="search-input" placeholder="Search by name, team, or driver">
+    <p id="more-setting">More Setting ▼</p>
+    <div id="filter-place">
+      <div class="sort-contain">
+        <label for="sort-select">Sort by :</label>
+        <select id="sort-select">
+          <option value="year">Year</option>
+          <option value="name">Name</option>
+          <option value="constructorPoints">Points</option>
+        </select>
+      </div>
+      <div class="era-container">
+        <label for="era-select">Filter by Era :</label>
+        <select id="era-select">
+          <option value="all">All</option>
+          <option value="1950-1959">1950-1959</option>
+          <option value="1960-1969">1960-1969</option>
+          <option value="1970-1979">1970-1979</option>
+          <option value="1980-1989">1980-1989</option>
+          <option value="1990-1999">1990-1999</option>
+          <option value="2000-2009">2000-2009</option>
+          <option value="2010-2019">2010-2019</option>
+          <option value="2020-2023">2020-2023</option>
+        </select>
+      </div>
+      <div class="checkbox-container">
+        <div>
+          <label for="wdc-filter">WDC</label>
+          <input type="checkbox" id="wdc-filter">
         </div>
-        <div class="content-container">
-            <h1 class="hidden animate__animated">What is <span class="invert-text">Formula 1</span> actually?</h1>
-            <p>
-                Formula 1, also known as F1, is the premier category of international single-seater open-wheel racing, overseen by the 
-                Fédération Internationale de l'Automobile (FIA). It has been in operation since its first race at the 1950 British Grand Prix.
-            </p>
-            <p>
-                The term "formula" refers to the set of guidelines all participants' vehicles must adhere to. A Formula One season comprises 
-                multiple races known as Grands Prix, which are held across various countries and continents on dedicated tracks or closed public roads.
-            </p>
-            <p>
-                Formula One cars are the fastest regulated road-course racing vehicles globally, achieving high cornering speeds through significant 
-                aerodynamic downforce. The cars evolve annually under specific regulations, producing some of the most iconic racing machines.
-            </p>
-            <img src="../assets/1950-1959/1954MercedesW196.jpg" alt="1954 Mercedes W196">
-            <figcaption>Fig.1 - Mercedes W196 driven by Juan Manuel Fangio, 1954</figcaption>
+        <div>
+          <label for="wcc-filter">WCC</label>
+          <input type="checkbox" id="wcc-filter">
         </div>
-    </section>
-    <hr>
-    <section id="before-1950" class="section-display">
-        <div class="number-container">
-            <h1>02</h1>
+        <div>
+          <label for="show-all-filter">All</label>
+          <input type="checkbox" id="show-all-filter" checked>
         </div>
-        <div class="content-container">
-            <h1 class="hidden animate__animated"><span class="invert-text">Before 1950s</span> : The First Grand Prix</h1>
-            <p>
-                Formula One evolved from the European Motor Racing Championships of the 1920s and 1930s. Prior to the official establishment of the 
-                Formula 1 World Championship in 1950, motor racing, including Grand Prix events, was flourishing in Europe. The Formula One 
-                regulations were agreed upon in 1946 and took effect in 1947.
-            </p>
-            <p>
-                In the early 1900s, motor racing gained traction across Europe, particularly in countries like France, Italy, and Germany. Grand Prix races, 
-                initially organized by automotive clubs, showcased leading manufacturers like Mercedes-Benz, Auto Union, Bugatti, and Alfa Romeo. The 1920s 
-                saw the rise of significant Grand Prix events, such as the French and Italian Grand Prix, drawing large audiences and global interest.
-            </p>
-            <img src="../assets/TalbotDarracq_1921.gif" alt="1921 Talbot Darracq of Chassagne">
-            <figcaption>Fig.2 - Talbot Darracq of Chassagne at 200 Miles of Brooklands, 1921</figcaption>
-            <p>
-                Cars from this era were generally large and heavy, often equipped with superchargers for increased power. The 1930s marked the Golden Age of 
-                Grand Prix racing, with notable events like the Monaco, German, and Belgian Grand Prix becoming prominent. The European Grand Prix, rotating 
-                between different circuits, was a flagship event. Legendary drivers like Tazio Nuvolari, Rudolf Caracciola, and Achille Varzi became famous, 
-                showcasing remarkable skill and bravery. This period also saw technological innovations like independent suspension systems and streamlined 
-                bodywork to enhance performance.
-            </p>
-            <p>
-                Safety standards were low, with races held on demanding road circuits, posing significant risks to drivers and spectators. Sadly, many drivers 
-                from this era lost their lives in crashes. World War II halted Grand Prix racing in 1939, as resources were redirected to the war effort. Many 
-                circuits were repurposed for military use, and several key drivers and manufacturers were involved in the conflict.
-            </p>
-            <p>
-                The first Grand Prix under the new regulations was the 1946 Turin Grand Prix, preceding the formula's official start. Before WWII, proposals 
-                were made for a new championship to replace the European Championship, but the war delayed its implementation. The new International Formula 
-                was formalized in 1946, effective from 1947, and the World Championship began in 1950.
-            </p>
-            <img src="../assets/Wimile_Turin_1946.jpg" alt="1946 Turin Grand Prix">
-            <figcaption>Fig.3 - Second place finisher Jean-Pierre Wimille in front of winner Achille Varzi, 1946</figcaption>
-        </div>
-    </section>
-    <section id="1950s" class="section-display">
-        <div class="number-container">
-            <h1>03</h1>
-        </div>
-        <div class="content-container">
-            <h1 class="hidden animate__animated"><span class="invert-text">1950s</span> : Front-Engine Italian Glory</h1>
-            <p>
-                The 1950s were the inaugural decade of the Formula 1 World Championship, witnessing major advancements in technology, safety, and competition. 
-                Established by the Fédération Internationale de l'Automobile (FIA) in 1950, the initial season featured seven races, including iconic events 
-                like the British, Monaco, and Italian Grand Prix. Giuseppe Farina became the first Formula 1 World Champion, driving for Alfa Romeo.
-            </p>
-            <img src="../assets/1950_britishGP.avif" alt="1950 British Grand Prix">
-            <figcaption>Fig.4 - Giuseppe Farina (front) leads Luigi Fagioli (back) at British Grand Prix, 1950</figcaption>
-            <p>
-                Alfa Romeo and Ferrari were dominant forces in the early years, with powerful engines and skilled drivers. From 1950 to 1959, Alfa Romeo, 
-                Ferrari, and Maserati together won 7 Drivers' World Championships and led for 6 seasons, before Mercedes-Benz and British manufacturers 
-                like Vanwall and Cooper claimed the remaining titles of the decade.
-            </p>
-            <p>
-                The 1950s saw rapid technological progress, including advanced chassis designs, aerodynamic improvements, and more powerful engines. 
-                Supercharged engines were common early on, gradually being replaced by naturally aspirated engines. The 1958 season introduced the 
-                Constructors' Championship, acknowledging the manufacturers' contributions. Vanwall became the first team to win the Constructors' 
-                Championship in 1958 with the Vanwall VW5, though the Drivers' Championship went to Mike Hawthorn in the Ferrari 246 F1. The decade 
-                ended with Jack Brabham winning his first World Championship in 1959 with the Cooper team.
-            </p>
-            <img src="../assets/1950-1959/1959CooperClimaxT51.jpg" alt="1959 Cooper Climax T51">
-            <figcaption>Fig.5 - Cooper Climax T51 (front) and Vanwall VW5 (behind)</figcaption>
-        </div>
-    </section>
-    <hr>
-    <section id="1960s" class="section-display">
-        <div class="number-container">
-            <h1>04</h1>
-        </div>
-        <div class="content-container">
-            <h1 class="hidden animate__animated"><span class="invert-text">1960s</span> : First Technological Advancement</h1>
-            <p>
-                The 1960s was a transformative decade for Formula 1, featuring technological advancements, new teams and drivers, and significant regulatory 
-                changes. The decade started with the widespread adoption of rear-engine cars, a trend started by Cooper in 1959, helping Jack Brabham win 
-                his first title that year. By 1960, this layout became the norm due to its better weight distribution and handling. British teams like 
-                Lotus, BRM, and Cooper dominated the early 1960s.
-            </p>
-            <img src="../assets/1960-1969/1960CooperClimaxT53.jpg" alt="1960 Cooper Climax T53">
-            <figcaption>Fig.6 - Cooper Climax T53 driven by Jack Brabham in Dutch Grand Prix, 1960</figcaption>
-            <p>
-                Drivers such as Jim Clark, Graham Hill, Jack Brabham, Jackie Stewart and John Surtees became leading figures in this era. Lotus, led by Colin Chapman, 
-                introduced the monocoque chassis design with the Lotus 25 in 1962, significantly enhancing the car's rigidity and safety and setting a new 
-                standard for Formula 1 car design. Honda entered Formula 1 in the mid-1960s, bringing its expertise in engine technology from motorcycle racing.
-                The Honda RA272, driven by Richie Ginther, secured the company's first Grand Prix victory in 1965 at the Mexican Grand Prix.
-            </p>
-            <p>
-                Teams began experimenting with aerodynamic elements, including wings and spoilers, to improve downforce and handling. In those 
-                years its quite often seeing a team with ridiculously high spoiler. These innovations laid the groundwork for the sophisticated 
-                aerodynamics seen in modern Formula 1 cars. However, in this era is considered one of the deadliest era of Formula 1 
-                after 1950s era. The car is getting faster and more powerful but the safety standard is low both in car 
-                and in track with minimal run off area and high kerbing. One of the most tragic 
-                moment is the tragic loss of Jim Clark on 1968 Hockenheim Grand Prix during Formula 2 session in rain. Another notable crash is 
-                when Jackie Stewart crash at Belgium Grand Prix of Spa-Franchorchamp in 1966 also in rain condition which resulting 
-                him crash to telephone pole at approximately 165mph (266km/h) that shed his car, fortunately he survived those horiffic accident.
-                These tragedies led to increased scrutiny of track safety and the introduction of regulations aimed at protecting drivers.
-            </p>
-            <img src="../assets/1960-1969/1965Lotus33.jpg" alt="1965 Lotus Climax 33">
-            <figcaption>Fig.7 - Lotus Climax 33 driven by Jackie Stewart in 2013</figcaption>
-            <p>
-                The late 1960s saw the beginning of commercial sponsorship in Formula 1, with cars starting to feature 
-                advertising logos. This change significantly increased the financial resources available to teams, 
-                transforming the business model of the sport. The 1960s were a pivotal decade in Formula 1 history, characterized by 
-                significant technological advancements, the rise of new teams and drivers, 
-                and a growing awareness of safety issues. The innovations and changes during this period set the stage for 
-                the continued evolution of the sport in the following decades.
-            </p>
-            <img src="../assets/1960-1969/1969MatraMS80.jpg" alt="1969 Matra Ford MS80">
-            <figcaption>Fig.8 - Matra MS80 driven by Jackie Stewart at German Grand Prix, 1969</figcaption>
-        </div>
-    </section>
-    <hr>
-    <section id="1970s" class="section-display">
-        <div class="number-container">
-            <h1>05</h1>
-        </div>
-        <div class="content-container">
-            <h1 class="hidden animate__animated"><span class="invert-text">1970s</span> : Appearance of Formula 1 with Aero</h1>
-            <p>
-                The 1970s were a pivotal decade in Formula 1, marked by technological advancements, 
-                increased commercial involvement, and the emergence of 
-                new safety measures. Aerodynamics began to play a crucial role, with teams introducing wings and other aerodynamic devices to enhance 
-                downforce and improve cornering speeds.
-            </p>
-            <p>
-                Lotus, under the guidance of Colin Chapman, was a pioneer in aerodynamic 
-                innovation. The Lotus 72, introduced in 1970, featured an 
-                innovative wedge-shaped design and side-mounted radiators, becoming one of the most 
-                successful cars of the decade. 
-            </p>
-            <img src="../assets/1970-1979/1972Lotus72D.jpg" alt="1972 Lotus 72D">
-            <figcaption>Fig.9 - Lotus 72D driven by Emerson Fittipaldi, 1972</figcaption>
-            <p>
-                Safety also became a significant focus following a series of fatal accidents. 
-                Drivers such as Jochen Rindt, who posthumously won the 1970 
-                championship, Roger Williamson, and Francois Cevert who tragically died in 1973, 
-                highlighted the need for improved safety standards. The Grand Prix 
-                Drivers' Association (GPDA) pushed for safer circuits, better medical facilities, 
-                and stronger car construction.
-            </p>
-            <p>
-                The decade saw fierce competition between teams like Ferrari, McLaren, and Tyrrell. 
-                Niki Lauda, driving for Ferrari, became a dominant force, 
-                winning the World Championship in 1975 and 1977. His near-fatal crash in 1976 and miraculous recovery to challenge for the title 
-                highlighted the sport's dangers and the bravery of its drivers.
-            </p>
-            <img src="../assets/1970-1979/1975Ferrari312T.jpg" alt="1975 Ferrari 312T">
-            <figcaption>Fig.10 - Ferrari 312T</figcaption>
-            <p>
-                Sponsorship and commercialism began to reshape Formula 1 in the 1970s. 
-                Teams secured lucrative deals with major corporations, leading to 
-                the now-familiar sight of cars adorned with prominent brand logos. Bernie Ecclestone, 
-                who took control of the commercial rights for the 
-                sport, played a crucial role in transforming Formula 1 into a global spectacle.
-            </p>
-            <p>
-                In those era, many team use a legendary engine of Ford Cosworth DFV that proven reliable, powerful, has greatest 
-                drivability and cheap. It's considered as one of the best engine ever used in Formula 1. 
-                It produced around 500HP naturally aspirated which is a lot for those era.
-            </p>
-            <p>
-                Towards the end of the decade, ground effect aerodynamics, pioneered by Lotus with the Lotus 79, 
-                revolutionized car design. This innovation used shaped underbodies to create significant 
-                downforce, allowing for higher cornering speeds and better handling.
-            </p>
-            <img src="../assets/1970-1979/1978Lotus79.jpg" alt="1978 Lotus 79">
-            <figcaption>Fig.11 - Lotus 79 driven by Mario Andretti, 1978</figcaption>
-            <p>
-                Overall, the 1970s were a transformative period for Formula 1, setting the stage for 
-                the highly technical and commercially driven era that would follow in subsequent decades.
-            </p>
-        </div>
-    </section>
-    <hr>
-    <section id="1980s" class="section-display">
-        <div class="number-container">
-            <h1>06</h1>
-        </div>
-        <div class="content-container">
-            <h1 class="hidden animate__animated"><span class="invert-text">1980s</span> : Turbocharged Madness</h1>
-            <p>
-                The 1980s in Formula 1 were defined by the rise of turbocharged engines. Renault 
-                pioneered this technology, and by mid-decade, most teams had adopted turbo engines, 
-                leading to unprecedented power outputs and higher speeds.
-            </p>
-            <p>
-                In those era is quite often formula 1 car got huge turbo lag because the turbo they are used is so big. 
-                In the peak turbo era, in qualifying trim Formula 1 car could reach horsepower up to 1200HP that only lasted for 3 laps. In 1986, Benetton B186 got BMW engine 
-                named M12/M13 that could produce 1400HP with over 5 Bar of turbo boost.  
-            </p>
-            <img src="../assets/1980-1989/1980WilliamsFW07B.jpg" alt="WIlliams FW07B">
-            <figcaption>Fig.12 - Williams FW07B, 1980</figcaption>
-            <p>
-                McLaren, Williams, and Ferrari emerged as the dominant teams. Niki Lauda and Alain Prost helped McLaren dominate the mid-1980s with the MP4/2, which won three drivers' championships (1984-1986) and two constructors' titles (1984-1985). 
-            </p>
-            <img src="../assets/1980-1989/1984McLarenMP4-2.jpg" alt="McLaren MP4/2">
-            <figcaption>Fig.13 - McLaren MP4/2 driven by Alain Prost, 1984</figcaption>
-            <p>
-                The rivalry between Ayrton Senna and Alain Prost began in the late 1980s when they were 
-                teammates at McLaren, culminating in dramatic clashes in 1989 Japanese Grand Prix and 1990 Japanese Grand Prix. 
-                Senna won his first championship in 1988 driving the McLaren MP4/4.
-            </p>
-            <img src="../assets/1980-1989/1988McLarenMP4-4.jpg" alt="McLaren MP4/4">
-            <figcaption>Fig.14 - McLaren MP4/4 driven by Ayrton Senna, 1988</figcaption>
-            <p>
-                Ground effect technology, introduced in the late 1970s, was further developed in the early 1980s. 
-                However, safety concerns led to the ban of ground effect cars in 1983. The decade ended with a shift 
-                towards naturally aspirated engines, banning turbo engines after the 1988 season.
-            </p>
-        </div>
-    </section>
-    <hr>
-    <section id="1990s" class="section-display">
-        <div class="number-container">
-            <h1>07</h1>
-        </div>
-        <div class="content-container">
-            <h1 class="hidden animate__animated"><span class="invert-text">1990s</span> : Electronic advancement in Formula 1</h1>
-            <p>
-                The 1990s were a decade of significant technological advancements in Formula 1. 
-                Electronic driver aids such as traction control, semi-automatic gearboxes, 
-                and active suspension systems became standard, improving car performance and handling.
-                In those era Formula 1 car use naturally aspirated engine of V10, V8 and V12 before eventually at late 
-                1990s all teams using V10 engine because it has big power like V12 but as light as V8 engine.
-            </p>
-            <p>
-                Williams, under Adrian Newey's technical leadership, dominated the early 1990s 
-                with innovations like the active suspension in the FW14B. 
-                Nigel Mansell and Alain Prost won championships with Williams in 1992 and 1993, respectively.
-            </p>
-            <img src="../assets/1990-1999/1992WilliamsFW14B.jpg" alt="Williams FW14B">
-            <figcaption>Fig.15 - Williams FW14B</figcaption>
-            <p>
-                In this era we introduced by a young prodigy of Michael Schumacher emerged as a major talent, 
-                winning back-to-back titles with Benetton in 1994 and 1995. His move to Ferrari in 
-                1996 set the stage for their dominance in the early 2000s.
-            </p>
-            <img src="../assets/1990-1999/1995BenettonB195.jpg" alt="Benetton B195">
-            <figcaption>Fig.16 - Benetton B195 in Michael Schumacher museum</figcaption>
-            <p>
-                The tragic deaths of Ayrton Senna and Roland Ratzenberger at the 1994 San Marino Grand Prix 
-                led to significant safety improvements. The FIA introduced stricter regulations on car design, 
-                circuit safety, and driver protection. It considered as one of the darkest day of Formula 1 after a long year 
-                of no fatality in those era. 
-            </p>
-            <p>
-                By the end of the decade, McLaren and Ferrari had returned to the forefront of Formula 1 with new regulations 
-                introduced at 1998 season. 
-                Notably Mika Hakkinen who won 1998 and 1999 Driver's title. Schumacher won multiple races, 
-                setting the stage for the team's dominance in the early 2000s.
-            </p>
-            <img src="../assets/1990-1999/1999McLarenMP4-14.jpg" alt="McLaren MP-14">
-            <figcaption>Fig.17 - McLaren MP4-14 driven by Mika Hakkinen, 1999</figcaption>
-        </div>
-    </section>
-    <hr>
-    <section id="2000s" class="section-display">
-        <div class="number-container">
-            <h1>08</h1>
-        </div>
-        <div class="content-container">
-            <h1 class="hidden animate__animated"><span class="invert-text">2000s</span> : Bring back those V10 and V8!</h1>
-            <p>
-                The 2000s were marked by Ferrari's dominance, with Michael Schumacher winning five consecutive drivers' 
-                titles from 2000 to 2004. The Ferrari F2002 and F2004 were particularly dominant, 
-                showcasing the team's technical superiority and Schumacher's skill. With V10 engine era that become the most 
-                iconic Formula 1 engine of all time with distinctive loud sound and incredible power. 
-            </p>
-            <img src="../assets/2000-2009/2004FerrariF2004.jpg" alt="Ferrari F2004">
-            <figcaption>Fig.18 - Ferrari F2004 driven by Michael Schumacher, 2004</figcaption>
-            <p>
-                The early 2000s also saw the continuation of the rivalry between Ferrari and McLaren in the likes of Michael Schumacher 
-                and Mika Hakkinen in year 2000. Teams like Williams, McLaren and Renault constantly giving Ferrari the competition throughout 
-                the 2000 to 2004 before eventualy Ferrari dominance broke by Renault led by Fernando Alonso by 
-                winning the drivers' and constructors' championships in 2005 and 2006.
-            </p>
-            <img src="../assets/2000-2009/2005RenaultR25.jpg" alt="Renault R25">
-            <figcaption>Fig.19 - Renault R25 driven by Fernando Alonso, 2005</figcaption>
-            <p>
-                The decade witnessed significant changes in regulations aimed at improving safety and 
-                reducing costs. The introduction of V10 and later V8 engines, along with aerodynamic 
-                restrictions and banning of traction control, aimed to curb increasing speeds and make the 
-                sport more competitive than before.
-            </p>
-            <p>
-                The late of 2000s also saw the rise of Lewis Hamilton, who won his first championship 
-                with McLaren in 2008. His victory marked the beginning of a new era, 
-                with Hamilton set to become one of the most successful drivers in F1 history in the later years.
-            </p>
-            <img src="../assets/2000-2009/2008McLarenMP4-23.jpg" alt="McLaren MP4-23">
-            <figcaption>Fig.20 - McLaren MP4-23 driven by Lewis Hamilton, 2008</figcaption>
-            <p>And in the final year of this era, FIA brought the new rules with introduction of slick tyres, lower and wider 
-                front wings, and skinner but taller rear wings. Brawn GP, a rebranded Honda team from 2008 become the shock of the 
-                world by winning the constructor and driver championship with the help of Jenson Button and Rubens Barichello.
-            </p>
-            <img src="../assets/2000-2009/2009BrawnGP001.jpg" alt="Brawn GP 001">
-            <figcaption>Fig.21 - Brawn GP 001 driven by Jenson Button, 2009</figcaption>
-        </div>
-    </section>
-    <hr>
-    <section id="2010s" class="section-display">
-        <div class="number-container">
-            <h1>09</h1>
-        </div>
-        <div class="content-container">
-            <h1 class="hidden animate__animated"><span class="invert-text">2010s</span> : Hybrid engine era</h1>
-            <p>
-                The 2010s introduced the hybrid engine era, bringing significant technological changes to Formula 1. 
-                The new power units combined internal combustion engines with electric motors, 
-                emphasizing efficiency and sustainability. 
-            </p>
-            <p>
-                Red Bull Racing, with Sebastian Vettel, dominated the early part of the decade, winning four 
-                consecutive championships from 2010 to 2013. Adrian Newey's innovative car designs played a crucial 
-                role in Red Bull's success. In 2012 we saw the greatest championship battle of F1 history involving Sebastian Vettel, 
-                Fernando Alonso in Ferrari, Lewis Hamilton and Jenson Button in Mercedes. Also the comeback of legendary driver 
-                of Michael Schumacher at Mercedes and Kimi Raikkonen at Lotus after short hiatus. 
-            </p>
-            <img src="../assets/2010-2019/2013RedBullRacingRB09.jpg" alt="Red Bull RB9">
-            <figcaption>Fig.22 - Sebastian Vettel (left) and Mark Webber (right) at Malaysian Grand Prix, 2013</figcaption>
-            <p>
-                The introduction of hybrid power units in 2014 marked a new era, with Mercedes becoming the 
-                dominant force. Lewis Hamilton and Nico Rosberg led the team to multiple championships, 
-                with Hamilton winning six titles during the decade with mercedes. At this era we saw an enormous amount of talent in the 
-                grid the likes of Daniel Ricciardo, Young days of Max Verstappen debuting at 17 years old at 2015, Sebastian Vettel 
-                in Ferrari and Charles Leclerc in the 2018. 
-            </p>
-            <img src="../assets/2010-2019/2016MercedesW07.jpg" alt="Mercedes W07">
-            <figcaption>Fig.23 - Mercedes W07 driven by Lewis Hamilton, 2016</figcaption>
-            <p>
-                In the 2017, a revised rule making the Formula 1 car has wider and longer body resulting the significant 
-                improvement of downforce making the F1 car become pretty quick again after the first introduction of hybrid era in 2014.
-            </p>
-            <p>
-                The 2010s also saw increased efforts to improve safety, with the introduction of the halo device following 
-                the tragic demise of Jules Bianchi at 2014 Japanese Grand Prix. Halo device introduced in 2018 to protect drivers' heads from debris and impacts. The decade was characterized by 
-                fierce competition, advanced technology, and a push towards more sustainable racing.
-            </p>
-            <p>
-                In this era also face a new problem with bigger, longer and heavier car from 2017 to 2021 making the overtaking 
-                difficult unless using DRS. However the car is getting incredibly quick with the Mercedes, Ferrari and RedBull become 
-                the top trio of 2014 to 2019 era.
-            </p>
-            <img src="../assets/2010-2019/2019MercedesW10.jpg" alt="Mercedes W10">
-            <figcaption>Fig.24 - Mercedes W10 driven by Valteri Bottas, 2019</figcaption>
-        </div>
-    </section>
-    <hr>
-    <section id="2020s" class="section-display">
-        <div class="number-container">
-            <h1>10</h1>
-        </div>
-        <div class="content-container">
-            <h1 class="hidden animate__animated"><span class="invert-text">2020s</span> : Fastest F1 Car and Ground-effect comeback</h1>
-            <p>
-                The 2020s have seen the continuation of hybrid technology, with a focus on sustainability and 
-                efficiency. Mercedes continued to dominate, with Lewis Hamilton matching Michael Schumacher's 
-                record of seven world titles in 2020. Lewis Hamilton untouchable in 2020 driving Mercedes W11 with his 
-                incredible skill to clinch his seven world title. With enormous amount of downforce, superior engine, 
-                great realibility make it the fastest Formula 1 car ever made. 
-            </p>
-            <p>
-                The COVID-19 pandemic affected the 2020 season, leading to a revised calendar and races held 
-                without spectators. Despite the challenges, the season was highly competitive, 
-                with new talents like Max Verstappen and Charles Leclerc emerging as future champions.
-            </p>
-            <img src="../assets/2020-2023/2020MercedesW11.jpg" alt="Mercedes W11">
-            <figcaption>Fig.25 - Mercedes W11 driven by Lewis Hamilton, 2020</figcaption>
-            <p>
-                The new technical regulations introduced in 2022 aimed to reduce aerodynamic 
-                turbulence and promote closer racing. These changes saw a return to ground-effect 
-                aerodynamics, a concept last used in the early 1980s.
-            </p>
-            <p>
-                Red Bull Racing, with Max Verstappen, has emerged as a strong contender, winning 
-                multiple races and challenging Mercedes' dominance. The 2020s have brought renewed 
-                excitement and competition to Formula 1, with a focus on innovation and sustainability.
-            </p>
-            <p>
-                In 2021 we saw one the greatest Formula 1 season ever in terms of championship battle with Max Verstappen 
-                in RedBull RB16B against defendant of Lewis Hamilton in Mercedes W12. The title battle was so iconic and decided 
-                at controversial 2021 Abu Dhabi Grand Prix at the last lap of the race with Max Verstappen emerging as victor of 2021 season, 
-                ending the dominance of Mercedes in Hybrid era.
-            </p>
-            <img src="../assets/2020-2023/2021RedBullRacingRB16B.jpg" alt="Red Bull RB16B">
-            <figcaption>Fig.26 - Red Bull RB16B driven by Max Verstappen, 2021</figcaption>
-            <p>
-                In 2022, RedBull proves their dominance in ground-effect era. With Adrian Newey and the team 
-                create a masterpiece of grund effect car by winning the driver's title and constructors 
-                championship with Max Verstappen and Sergio Perez. The 2022 F1 car have distinctive characterictic of very curved 
-                rear wings and wider rims. In 2023 we saw probably the most dominant season ever with RedBull in their almighty 
-                RedBull RB19 win every race except one in singapore. Max Verstappen become the three time world champion breaking 
-                every record available for a season. 
-            </p>
-            <img src="../assets/2020-2023/2023RedBullRacingRB19.jpg" alt="Red Bull RB19">
-            <figcaption>Fig.27 - Red Bull RB19 driven by Max Verstappen, 2023</figcaption>
-            <p>But in 2022-2023 era facing difficult problem such as heavier car and taller car making driving it difficult, 
-                especially at street circuit the likes of Monaco that has very tight and technical corner. Also the ground effect car 
-                create an enormous amount of spray when raining, making the visibility of driver behind it even more obscured.
-            </p>
-            <p>Currently we on 2024 season with as now, RedBull of Max Verstappen the driver championship. But the emergence of 
-                McLaren continuing their momentum after big upgrade in the mid 2023 and Ferrari making the constructor battle tighter 
-                than ever. Well, the 2024 saw the most competitive grid ever with position 1 to 20 in the qualifying often has covered by 
-                only one second. Let's see who is emerging victorius!
-            </p>
-        </div>
-    </section>
-</section>
+      </div>
+    </div>
+  </div>
+  <section id="car-list"></section>
+  <div id="overlay"></div>
+  <div id="description-box" style="display: none;">
+    <div id="desc-upper">
+      <h2 id="desc-title"></h2>
+      <span class="material-symbols-outlined close-btn" onclick="Car.closeDescription()">
+        close
+      </span>
+    </div>
+    <div id="description-content"></div>
+  </div>
 </main>
 
 <footer>
   <p>&copy; 2024 F1 Championship Winning Cars. All rights reserved.</p>
 </footer>
-
 <div class="loader"></div>
 </body>
 </html>
