@@ -51,6 +51,7 @@ img{
     height: auto;
     margin: 25px 0 10px 0;
     border-radius: 50px;
+    box-shadow: 10px 10px 10px var(--col-shadow-dim);
 }
 figcaption{
     margin: 10px 0 25px 0;
