@@ -169,21 +169,18 @@ document.getElementById("more-setting").onclick = MoreSetting.toggleSetting;
     const wccClass = isWCC ? 'wcc-true' : '';
 
     carCard.innerHTML = `
-     <img src="${image}" alt="${name}">
-      <div class="car-card-text">
-        <h2>${name}</h2>
-        <div class="team-wrapper">
-          <h3>${team}</h3>
-          <div>
-            <h4 class="WDC ${wdcClass}">WDC</h4>
-            <h4 class="WCC ${wccClass}">WCC</h4>
-          </div>
-        </div>
-        <div class="car-card-p">
-          <p>${drivers.join(', ')}</p>
-          <p>${year}</p>
-          <p>Constructor points: ${constructorPoints}</p>
-        </div>
+      <div class="image-wrapper">
+        <img src="${image}" alt="${name}">
+      </div>
+      <h2>${name}</h2>
+      <div class="WDC-WCC">
+        <h4 class="WDC ${wdcClass}">WDC</h4>
+        <h4 class="WCC ${wccClass}">WCC</h4>
+      </div>
+      <div class="car-card-p">
+        <p>${drivers.join(', ')}</p>
+        <p>${year}</p>
+        <p>Constructor points: ${constructorPoints}</p>
       </div>
     `;
     // Add click event listener to show description
